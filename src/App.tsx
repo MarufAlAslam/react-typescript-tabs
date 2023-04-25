@@ -6,6 +6,7 @@ import Tab from "./Components/tab"
 import { getTranslations, addTranslation, updateTranslation, deleteTranslation } from './API'
 import logo from './logo.svg';
 import './App.css';
+import Statistics from './Components/Statistics';
 
 const App: React.FC = () => {
   const [translations, setTranslations] = useState<ITranslation[]>([])
@@ -69,7 +70,9 @@ const App: React.FC = () => {
           translation={translation}
         />
       ))}</Tab>
-      <Tab title='Statistics'>Hello Man</Tab>
+      <Tab title='Statistics'>
+        <Statistics/>
+      </Tab>
     </Tabs>
     </main>
   )
